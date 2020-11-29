@@ -4,10 +4,11 @@ import media from 'styled-media-query'
 export const Wrapper = styled.section`
   ${({ theme }) => css`
     display: flex;
+
     background: ${theme.colors.secondaryBg};
-    transform: skewY(3deg);
-    border-top: 1rem solid ${theme.colors.primary};
     border-bottom: 1rem solid ${theme.colors.primary};
+    border-top: 1rem solid ${theme.colors.primary};
+    transform: skewY(3deg);
 
     ${media.greaterThan('medium')`
       padding: ${theme.spacings.large} 0;
@@ -20,6 +21,7 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: ${theme.spacings.medium};
+
     transform: skewY(-3deg);
 
     ${media.greaterThan('large')`
@@ -29,18 +31,15 @@ export const Container = styled.div`
   `}
 `
 
-export const Image = styled.picture`
-  max-width: 100%;
+export const Image = styled.img`
+  display: block;
 
-  img {
-    display: block;
-    max-width: min(60rem, 100%);
-    margin: 0 auto;
+  margin: 0 auto;
+  max-width: min(60rem, 100%);
 
-    ${media.lessThan('medium')`
+  ${media.lessThan('medium')`
       max-width: 100%;
     `}
-  }
 `
 
 export const Text = styled.div`
