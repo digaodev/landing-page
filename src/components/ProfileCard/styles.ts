@@ -2,37 +2,36 @@ import styled, { css } from 'styled-components'
 
 export const Card = styled.article`
   ${({ theme }) => css`
-    border-radius: ${theme.border.radius};
     background-color: ${theme.colors.secondaryBg};
+    border-radius: ${theme.border.radius};
     padding: ${theme.spacings.medium};
     text-align: center;
   `}
 `
 
-export const Image = styled.picture`
+export const Image = styled.img`
   ${({ theme }) => css`
-    img {
-      width: 12.5rem;
-      height: 12.5rem;
-      border-radius: 100%;
-      margin: auto;
-      margin-bottom: ${theme.spacings.xsmall};
-    }
+    border-radius: 100%;
+    margin: auto;
+    margin-bottom: ${theme.spacings.xsmall};
+
+    height: 12.5rem;
+    width: 12.5rem;
   `}
 `
 
 export const Name = styled.div`
   ${({ theme }) => css`
+    color: ${theme.colors.white};
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.bold};
-    color: ${theme.colors.white};
   `}
 `
 
 export const Role = styled.div`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.small};
     color: ${theme.colors.primary};
+    font-size: ${theme.font.sizes.small};
     margin-bottom: ${theme.spacings.xxsmall};
   `}
 `
@@ -41,6 +40,7 @@ export const SocialLinks = styled.ul`
   ${({ theme }) => css`
     display: flex;
     justify-content: center;
+
     margin-bottom: ${theme.spacings.xsmall};
   `}
 `
