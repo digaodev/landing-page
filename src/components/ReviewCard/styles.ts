@@ -2,9 +2,9 @@ import styled, { css } from 'styled-components'
 
 export const Card = styled.div`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
-    border-radius: ${theme.border.radius};
     background-color: ${theme.colors.secondaryBg};
+    border-radius: ${theme.border.radius};
+    color: ${theme.colors.white};
     padding: ${theme.spacings.medium};
     margin: ${theme.spacings.medium} 1.2rem;
     min-height: 26rem;
@@ -16,12 +16,11 @@ export const User = styled.div`
   display: flex;
 `
 
-export const Image = styled.picture`
-  img {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 100%;
-  }
+export const Image = styled.img`
+  border-radius: 100%;
+
+  height: 5rem;
+  width: 5rem;
 `
 
 export const Name = styled.p`
@@ -36,10 +35,12 @@ export const Text = styled.blockquote`
   ${({ theme }) => css`
     display: grid;
     justify-items: end;
-    margin-top: ${theme.spacings.xsmall};
+
+    position: relative;
+
     font-size: ${theme.font.sizes.xsmall};
     line-height: ${theme.font.sizes.medium};
-    position: relative;
+    margin-top: ${theme.spacings.xsmall};
 
     input {
       opacity: 0;
