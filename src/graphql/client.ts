@@ -1,5 +1,5 @@
 import { GraphQLClient } from 'graphql-request'
 
-export default new GraphQLClient('http://localhost:1337/graphql', {
+export default new GraphQLClient(process.env.GRAPHQL_HOST, {
   headers: {}
 })
